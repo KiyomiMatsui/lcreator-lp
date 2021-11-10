@@ -1,0 +1,50 @@
+.p-problem {
+  padding-top: 100px;
+  text-align: center;
+  @media (max-width: 767px) {
+    padding-top: 60px;
+  }
+  &__inner {
+    margin-top: 50px;
+    padding: 50px 0;
+    width: 130%;
+    background: url('../images/bg_problem.png') no-repeat -250px center / cover;
+    @media (max-width: 767px) {
+      background: url('../images/bg_problem.png') no-repeat center center /
+        cover;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+  &__list {
+    margin-left: 30%;
+    width: auto;
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  &__item {
+    background: white;
+    padding: 0 25px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid #707070;
+    font-size: 26px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    color: #2c9dbf;
+    margin-bottom: 20px;
+    &:nth-of-type(even) {
+      color: #0d576e;
+    }
+    @media (max-width: 767px) {
+      font-size: 16px;
+      height: 40px;
+      border-radius: 20px;
+      padding: 0 5px;
+      letter-spacing: -0.03em;
+    }
+  }
+}

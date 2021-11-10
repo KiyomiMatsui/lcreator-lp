@@ -1,0 +1,54 @@
+body {
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+    'HG丸ｺﾞｼｯｸM-PRO', 'HGMaruGothicMPRO', 'Noto Sans JP';
+  letter-spacing: 0.1em;
+  overflow-x: hidden;
+  font-size: 20px;
+  line-height: 1.6;
+}
+main {
+  width: 100%;
+  overflow-x: hidden;
+}
+p {
+  line-height: 1.6;
+}
+a {
+  color: #0152af;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+.inview.fadeIn {
+  opacity: 0;
+  transition: 1.5s;
+  transition-delay: 0.5s;
+}
+.fadeIn.is-show {
+  opacity: 1;
+}
+
+.fadeIn_up {
+  opacity: 0;
+  transform: translate(0, 50%);
+  transition: 1s;
+}
+.fadeIn_up.is-show {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.wpcf7-form-control-wrap {
+  width: 100%;
+  text-align: left;
+}
+.wpcf7-not-valid-tip {
+  margin-top: 3px;
+}
+.wpcf7-spinner {
+  display: block !important;
+  text-align: center;
+  margin: 0 auto !important;
+}

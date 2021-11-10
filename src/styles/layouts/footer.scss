@@ -1,0 +1,10 @@
+.l-footer {
+  background-color: black;
+  &__copyright {
+    padding: 7px 0;
+    font-size: 68%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+}

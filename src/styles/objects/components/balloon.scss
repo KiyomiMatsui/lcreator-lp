@@ -1,0 +1,33 @@
+.c-balloon {
+  &--v1 {
+    display: flex;
+    align-items: center;
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 20px solid white;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+      @media (max-width: 767px) {
+        border-top: 15px solid white;
+        border-left: 16px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 5px solid transparent;
+        margin: 0 auto;
+      }
+    }
+    &__inner {
+      background: white;
+      border: 6px solid #ea96a4;
+      height: 100%;
+      border-radius: 14px;
+    }
+    &--end {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}

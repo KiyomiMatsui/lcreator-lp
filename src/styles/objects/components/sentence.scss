@@ -1,0 +1,14 @@
+.c-sentence {
+  &--v1 {
+    line-height: 1.5em;
+    margin-bottom: 0.7em;
+  }
+  &--v2 {
+    &__text {
+      margin-bottom: 19px;
+      &2 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

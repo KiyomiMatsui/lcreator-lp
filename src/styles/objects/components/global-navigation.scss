@@ -1,0 +1,55 @@
+.c-global-navigation {
+  // PC
+  @media (min-width: 768px) {
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__item {
+      & > a {
+        white-space: nowrap;
+        padding: 10px 19px;
+        background-color: black;
+        color: var(--yellow);
+        margin-right: 5px;
+        &:before {
+          content: none;
+        }
+        &:after {
+          content: none;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+        .c-icon--arrow {
+          display: none;
+        }
+      }
+    }
+  }
+  // SP
+  @media (max-width: 767px) {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 0;
+    }
+    &__item {
+      width: 90%;
+      margin-bottom: 13px;
+    }
+    &__link {
+      display: flex;
+      background-color: white;
+      color: var(--navy-blue);
+      padding: 10px 23px 10px 10px;
+      text-align: left;
+      justify-content: space-between;
+      & .c-icon--arrow.--simple-right {
+        top: 11px;
+      }
+    }
+  }
+}

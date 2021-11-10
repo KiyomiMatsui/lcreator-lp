@@ -1,0 +1,54 @@
+@import '../../foundations/mixin.scss';
+
+.c-heading {
+  &--normal {
+    color: var(--blue);
+    font-size: 46px;
+    font-weight: bold;
+    @media (max-width: 767px) {
+      font-size: 24px;
+      line-height: 1.4;
+    }
+  }
+  &--white {
+    color: white;
+    font-size: 46px;
+    font-weight: bold;
+    @media (max-width: 767px) {
+      font-size: 24px;
+      line-height: 1.4;
+    }
+  }
+  &--row {
+    margin-bottom: 100px;
+    @media (max-width: 767px) {
+      margin-bottom: 50px;
+    }
+  }
+  &--en {
+    display: inline-flex;
+    font-family: opensans-bold;
+    align-items: center;
+    margin-bottom: 50px;
+    &:before {
+      content: '';
+      display: block;
+      width: 165px;
+      height: 15px;
+      background: url('../images/heading_dot.svg') no-repeat left center;
+      @media (max-width: 767px) {
+        width: 91px;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 165px;
+      height: 15px;
+      background: url('../images/heading_dot.svg') no-repeat right center;
+      @media (max-width: 767px) {
+        width: 91px;
+      }
+    }
+  }
+}

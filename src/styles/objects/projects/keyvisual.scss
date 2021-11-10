@@ -1,0 +1,60 @@
+.p-keyvisual {
+  background: black;
+  width: 100%;
+  &__container {
+    width: calc(100% - 40px);
+    padding-left: 40px;
+    max-width: none;
+    background: url('../images/keyvisual.png') black no-repeat 19% center / 150%
+      auto;
+    color: white;
+    height: calc(100vh - 50px);
+    min-height: 520px;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    @media (min-width: 1250px) {
+      margin-left: 10%;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      max-height: 400px;
+      background: url('../images/keyvisual.png') no-repeat center top / 394%
+        auto;
+      padding-left: 0;
+    }
+  }
+  &__text1 {
+    padding-top: 50px;
+    font-size: 29px;
+    display: block;
+    font-weight: bold;
+    @media (max-width: 767px) {
+      font-size: 17px;
+      padding: 30px 10px 10px;
+    }
+  }
+  &__text2 {
+    background: black;
+    font-size: 30px;
+    padding: 5px 15px 5px 40px;
+    display: inline-block;
+    margin-left: -40px;
+    @media (max-width: 767px) {
+      font-size: 20px;
+      margin-left: -5%;
+    }
+  }
+  &__text-main {
+    font-size: 74px;
+    line-height: 1.2;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @media (max-width: 767px) {
+      font-size: 37px;
+      padding: 0 10px 10px;
+      line-height: 1.4;
+    }
+  }
+}

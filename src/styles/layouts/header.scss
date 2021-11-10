@@ -1,0 +1,148 @@
+.l-header {
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  & + * {
+    margin-top: 50px;
+  }
+  &__head {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+
+    &__left {
+      display: flex;
+      align-items: center;
+      @media (max-width: 767px) {
+        font-size: 12px;
+        letter-spacing: 0.03em;
+        display: block;
+      }
+    }
+
+    &__right {
+      width: 50px;
+      height: 50px;
+      align-items: center;
+    }
+  }
+  &__catchcopy {
+    padding-left: 20px;
+    line-height: 1.2;
+    @media (max-width: 767px) {
+      line-height: 1.1;
+      padding-left: 0;
+    }
+  }
+  &__brand-logo-image {
+    max-height: 45px;
+    @media (max-width: 767px) {
+      max-height: 26px;
+    }
+  }
+  &__cv-btn {
+    margin-right: 5px;
+    font-size: 24px;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      margin-right: 2px;
+    }
+  }
+  &__hamburger {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      display: none;
+    }
+    &:before {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 25px;
+      background: var(--yellow);
+      position: absolute;
+      top: 14px;
+      left: 12px;
+      transition: all 0.3s;
+    }
+    span {
+      display: block;
+      width: 25px;
+      border-top: 2px solid var(--yellow);
+      background: var(--yellow);
+      position: absolute;
+      top: 24px;
+      left: 12px;
+      transition: all 0.3s;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 25px;
+      background: var(--yellow);
+      position: absolute;
+      top: 34px;
+      left: 12px;
+      transition: all 0.3s;
+    }
+    &.open {
+      &:before {
+        transform: translateY(9px) rotate(-45deg);
+      }
+      span {
+        display: none;
+      }
+      &:after {
+        transform: translateY(-11px) rotate(45deg);
+      }
+    }
+  }
+  &__global-navigation {
+    // PC
+    @media (min-width: 768px) {
+      &__inner {
+        height: 50px;
+        max-width: 1500px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+    // SP
+    @media (max-width: 767px) {
+      display: none;
+      position: fixed;
+      top: 50px;
+      width: 100%;
+      height: calc(100vh - 50px);
+      z-index: 2;
+      &.open {
+        display: block;
+      }
+      &__inner {
+        overflow-y: auto;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        padding-top: 31px;
+      }
+    }
+  }
+}
